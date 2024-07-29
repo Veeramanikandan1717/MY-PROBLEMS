@@ -1,0 +1,35 @@
+##
+
+1
+2*3
+4*5*6
+7*8*9*10
+11*12*13*14*15
+11*12*13*14*15
+7*8*9*10
+4*5*6
+2*3
+1    ##
+
+
+n=int(input())
+count=1
+for i in range(n+1):
+    for j in range(i):
+        if j==i-1:
+            print(f"{count}",end='')
+        else:
+            print(f"{count}*",end='')
+        count+=1
+    print()
+for row in range(n,0,-1):
+    delete=0
+    for col in range(row,0,-1):
+        if col==1:
+             print(f"{abs(count-col)}",end="")
+        else:
+             print(f"{abs(count-col)}*",end="")
+        delete+=1
+    count-=delete
+    print()
+##
