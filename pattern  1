@@ -14,9 +14,9 @@
 
 n=int(input())
 count=1
-for i in range(n+1):
-    for j in range(i):
-        if j==i-1:
+for i in range(n):
+    for j in range(i+1):
+        if j==i:
             print(f"{count}",end='')
         else:
             print(f"{count}*",end='')
