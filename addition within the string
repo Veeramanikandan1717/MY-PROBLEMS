@@ -1,0 +1,24 @@
+##
+
+sample input:
+  "123fefg4sf42"
+output:
+   167
+##
+s=input()
+s1=""
+se=[]
+for j in s:
+    if j in "0123456789":
+        s1+=j
+    else:
+        se.append(s1)
+        s1=''
+
+se.append(s1)
+add=0
+for i in se:
+    if i!="":
+        add+=int(i)
+print(add)
+        
